@@ -1,0 +1,9 @@
+<ul>
+  <% @recipes.each_with_index do |recipe, i| %>
+    <li>
+      <%= recipe.name %>: <%= recipe.description %>
+      <a href="/delete/<%= i %>" class="btn btn-danger">DELETE</a>
+    </li>
+  <% end %>
+</ul>
+<a href="/new">Create new recipe</a>
